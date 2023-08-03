@@ -38,7 +38,7 @@ function increasePlayerHealth(healValue) {
 function resetGame(value) {
   playerHealthBar.value = value;
   monsterHealthBar.value = value;
-}
+} 
 
 // NOTE: Removes the health bonus display onces player uses it
 function removeBonusLife() {
