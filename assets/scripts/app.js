@@ -12,10 +12,11 @@ const LOG_EVENT_PLAYER_HEAL = "PLAYER_HEAL";
 const LOG_EVENT_GAME_OVER = "GAME_OVER";
 
 // NOTE: both the monster and the player share the same life value but recorded different to monitor the damageDealth done to them in order to write out other function for them
-let chosenMaxLife = parseInt();
+let chosenMaxLife = parseInt(prompt("Enter a value"));
 //   prompt("Maximum life for you and monster.", "100")
-if (isNaN(chosenMaxLife) || chosenMaxLife <= 0 || !chosenMaxLife) {
-  chosenMaxLife = 100;
+if (isNaN(chosenMaxLife) || chosenMaxLife <= 0 || !chosenMaxLife  || chosenMaxLife > 200) {
+  throw {message: "Invalide entry, reload and enter a valid value"}
+  // chosenMaxLife = 100;
 }
 
 let currentMonsterHealth = chosenMaxLife;
